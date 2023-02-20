@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Build') {
+            steps {
+                git 'https://github.com/Jayrivarex/jenkdock.git'
+                sh 'docker build -t my-app .'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'docker run my-app npm test'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                
+                }
+            }
+        }
+    }
+}
