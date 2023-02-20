@@ -1,13 +1,8 @@
-FROM node:14-alpine
+FROM alpine:latest
 
-WORKDIR /app
 
-COPY package*.json ./
+RUN apk update && apk add nginx
 
-RUN npm install
+EXPOSE 80
 
-COPY . .
-
-EXPOSE 3000
-
-CMD ["npm", "start"]
+CMD ["nginx", "-g", "daemon off;"]

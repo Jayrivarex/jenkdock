@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 git 'https://github.com/Jayrivarex/jenkdock.git'
-                sh 'docker build -t dockerfile .'
+                sh 'docker build -t my-app .'
             }
         }
         stage('Test') {
@@ -17,6 +17,6 @@ pipeline {
             steps {
                 echo "this is my first Docker and Jenkins integration project"
                 }
-            }
         }
     }
+}
