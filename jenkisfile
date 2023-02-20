@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 git 'https://github.com/Jayrivarex/jenkdock.git'
-                sh 'docker build -t my-app .'
+                sh 'docker build -t dockerfile .'
             }
         }
         stage('Test') {
