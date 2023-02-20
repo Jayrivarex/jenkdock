@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                
+                echo "this is my first Docker and Jenkins integration project"
                 }
             }
         }
